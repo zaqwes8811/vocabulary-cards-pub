@@ -57,10 +57,10 @@ class File():
         try:
             self._fhandle.write(str)
             
-        except UnicodeEncodeError, e:
+        except UnicodeEncodeError as e:
             raise LocalHostDALException(e)
         
-        except IOError, e:
+        except IOError as e:
             raise LocalHostDALException(e)
         
 """ Выдает файловые объекты """
@@ -122,14 +122,14 @@ def list2file(sets, lst):
     if file != None and lst != None:
         file.write('\r\n'.join(lst))
     else :
-        print "list2file error occure"
+        print("list2file error occure")
 
 def app_str(sets, string):
     file = FabricOpen(sets)
     if file != None:
         file.write(string+'\r\n')
     else :
-        print "app_str error occure"
+        print("app_str error occure")
         
 # HIGHER ABSTRACTION
 def write_result_file(result_list, fname):
@@ -167,4 +167,4 @@ if __name__=='__main__':
             self.assertEqual(err[0], 1, 'File no must exist')
 
     unittest.main()
-    print 'Done'
+    print('Done')
