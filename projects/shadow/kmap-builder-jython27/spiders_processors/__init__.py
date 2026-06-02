@@ -4,17 +4,17 @@ import os
 import json
 
 # Other
-from dals.os_io.io_wrapper import list2file
-from dals.os_io.io_wrapper import get_utf8_template
-import dals.os_io.io_wrapper as dal
+from dals.local_host.local_host_io_wrapper import list2file
+from dals.local_host.local_host_io_wrapper import get_utf8_template
+import dals.local_host.local_host_io_wrapper as dal
 
 # App
 import crosscuttings.tools as tools
 from crosscuttings.tools import get_app_cfg_by_path
-from spiders_extractors._utils import _parse_target_params
+from spiders_processors._utils import _parse_target_params
 from app_utils import remove_forward_and_back_spaces
-from spiders_extractors._utils import get_node_name
-from spiders_extractors._utils import is_node
+from spiders_processors._utils import get_node_name
+from spiders_processors._utils import is_node
 
 # Convertors but how custome 
 from std_to_text_convertors.srt_to_text import std_srt_to_text_line
@@ -66,7 +66,7 @@ def extracte_text(url, sparams):
     if extention == 'srt':
         text_content = std_srt_to_text_line(url)
     else:
-        print 'Error: No implemented. Recognize only *.srt files. It *.'+extention
+        print('Error: No implemented. Recognize only *.srt files. It *.'+extention)
     result.append(text_content)
     
     return result
