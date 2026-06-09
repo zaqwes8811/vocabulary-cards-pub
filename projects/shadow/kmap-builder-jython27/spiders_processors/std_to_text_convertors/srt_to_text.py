@@ -6,11 +6,9 @@
 
 # Other
 import re
-import dals.os_io.io_wrapper as dal
+import dals.local_host.local_host_io_wrapper as dal
 
-
-
-from  nlp_components.filters import is_content_nums
+#from  nlp_components.filters import is_content_nums
 
 def std_srt_to_text_line(url):
     """ Тотлько для субтитров. """

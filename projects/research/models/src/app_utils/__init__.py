@@ -9,7 +9,7 @@ import dals
 import dals.local_host.local_host_io_wrapper as dal
 
 def printer(msg):
-    print msg
+    print(msg)
 
 def write_result_file(result_list, fname):
     sets = dal.get_utf8_template()
@@ -46,7 +46,7 @@ def remove_comments_from_task(raw_target):
     return list_without_comments
 
 if __name__=='__main__':
-    print 'Done'
+    print('Done')
     
     text = """ Punkt knows that the periods in Mr. Smith and Johann S. Bach
     do not mark sentence boundaries.  And sometimes sentences
